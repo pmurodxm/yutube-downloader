@@ -19,7 +19,7 @@ import subprocess
 # ────────────────────────────────────────────────
 # Sozlamalar
 # ────────────────────────────────────────────────
-CURRENT_VERSION = "1.0.0"                     # Har yangi release da o'zgartiring (masalan 1.1.0)
+CURRENT_VERSION = "1.1.0"                    
 GITHUB_REPO = "pmurodxm/yutube-downloader"
 TELEGRAM_CHANNEL = "@CodeDrop_py"
 
@@ -109,7 +109,7 @@ class YouTubeDownloaderApp:
         ttk.Label(url_frame, text="YouTube link:", style="Dark.TLabel").pack(side=tk.LEFT, padx=(0, 8))
         self.entry_url = ttk.Entry(url_frame, font=("Segoe UI", 11))
         self.entry_url.pack(side=tk.LEFT, fill=tk.X, expand=True, padx=5)
-        ttk.Button(url_frame, text="Boshlash", style="Accent.TButton", command=self.start_process).pack(side=tk.RIGHT, padx=5)
+        ttk.Button(url_frame, text="Yuklash", style="Accent.TButton", command=self.start_process).pack(side=tk.RIGHT, padx=5)
 
         # Thumbnail (height va width olib tashlandi, wraplength qo'shildi)
         thumb_frame = ttk.Frame(self.root, padding=10)
@@ -143,7 +143,7 @@ class YouTubeDownloaderApp:
         self.log_text.tag_config("info",    foreground="#93c5fd")
 
         # Status bar
-        self.status_var = tk.StringVar(value="Havolani kiriting va Boshlash tugmasini bosing")
+        self.status_var = tk.StringVar(value="Havolani kiriting va Yuklash tugmasini bosing")
         status = ttk.Label(self.root, 
                            textvariable=self.status_var, 
                            style="Status.TLabel",
